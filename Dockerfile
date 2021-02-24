@@ -21,7 +21,14 @@ RUN apt-get update \
      opencl-headers \
      mesa-common-dev \
      libmicrohttpd-dev \
-     build-essential
+     build-essential \
+     python3 \
+     python3-pip \
+     curl \
+     ocl-icd-libopencl1 \
+     python3-wxgtk4.0
+     
+     pip3 install git+https://github.com/YoRyan/nuxhash
 
 # Env setup
 ENV GPU_FORCE_64BIT_PTR=0
@@ -29,3 +36,5 @@ ENV GPU_MAX_HEAP_SIZE=100
 ENV GPU_USE_SYNC_OBJECTS=1
 ENV GPU_MAX_ALLOC_PERCENT=100
 ENV GPU_SINGLE_ALLOC_PERCENT=100
+
+ENTRYPOINT ["nuxhashd"]
