@@ -28,7 +28,7 @@ RUN apt-get update \
      ocl-icd-libopencl1 \
      python3-wxgtk4.0
      
-     pip3 install git+https://github.com/YoRyan/nuxhash
+     pip3 install git+https://github.com/AnkitOPBoy/nuxhash
 
 # Env setup
 ENV GPU_FORCE_64BIT_PTR=0
